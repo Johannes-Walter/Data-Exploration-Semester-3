@@ -1,4 +1,6 @@
 
+.spyproject/
+
 energy_consumption/
 solar_generation/
 wind_generation/
