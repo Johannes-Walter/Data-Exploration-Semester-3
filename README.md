@@ -9,3 +9,5 @@ https://www.kaggle.com/sohier/30-years-of-european-solar-generation
 
 Winderzeugung (Ordner "wind_generation"):
 https://www.kaggle.com/sohier/30-years-of-european-wind-generation
+
+heruntergeladene Archive sollten in wie beschriebene Ordner Extrahiert werden.
