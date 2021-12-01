@@ -2,20 +2,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import Lasso
-from sklearn.linear_model import ElasticNet
+from sklearn.linear_model import LinearRegression, Lasso, ElasticNet
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.neural_network import MLPRegressor
 
-from sklearn.model_selection import TimeSeriesSplit
-from sklearn.model_selection import cross_val_score
-
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import TimeSeriesSplit,cross_val_score, GridSearchCV
 
 
 ########## load data ##########
-df_energy_consumption = pd.read_csv('energy_consumption.csv', sep=",", usecols=["start", "load"])
+df_energy_consumption = pd.read_csv(r'energy_consumption/de.csv', sep=",", usecols=["start", "load"])
 
 
 ########## Data prep ##########
@@ -42,7 +37,7 @@ def split_data(data):
     y_test = data.loc[date_sep:, "today_consumption"]
     return x_train, y_train, x_test, y_test
 
-#x_train, y_train, x_test, y_test = split_data(df_energy_consumption_daily)
+x_train, y_train, x_test, y_test = split_data(df_energy_consumption_daily)
 
 
 ########## try different Algorithms ##########
