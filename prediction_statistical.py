@@ -20,7 +20,7 @@ df_energy_consumption_daily = df_energy_consumption_daily.groupby("date").mean()
 
 test = seasonal_decompose(df_energy_consumption_daily,
                           period=365,
-                          model="multi")
+                          model="add")
 
-#test.plot()
+test.plot()
 print(test.resid, test.seasonal)
